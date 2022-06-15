@@ -1,0 +1,32 @@
+{
+  "name": "playwright-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:positive": "playwright test e2e/positive-tests.spec.js",
+    "test:negative": "playwright test e2e/negative-tests.spec.js",
+    "test:all": "playwright test",
+    "test:debug": "PWDEBUG=1 yarn test:negative --debug --project=chromium",
+    "test:log": "PWDEBUG=pw:api yarn test",
+    "test:neg:headed": "yarn test:negative --headed",
+    "test:trace:view": "playwright show-trace"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olavovitor/playwright-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olavovitor/playwright-test/issues"
+  },
+  "homepage": "https://github.com/olavovitor/playwright-test#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.22.2"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^7.2.0"
+  }
+}
